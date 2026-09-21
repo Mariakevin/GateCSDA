@@ -136,6 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => observer.observe(section));
 
+    // === SCROLL-DRIVEN SECTION REVEAL ===
+    const revealSections = document.querySelectorAll('.section');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    revealSections.forEach(section => {
+        section.classList.add('reveal');
+        revealObserver.observe(section);
+    });
+
     // === HAMBURGER MENU ===
     const hamburger = document.getElementById('hamburger');
     const sidebar = document.getElementById('sidebar');

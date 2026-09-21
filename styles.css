@@ -99,6 +99,53 @@ body > * {
     z-index: 1;
 }
 
+/* === SCROLL-DRIVEN SECTION REVEAL === */
+.section.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === MICRO-ENTRANCE ANIMATIONS (hero load) === */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-section {
+    animation: fadeIn 0.4s ease;
+}
+
+.hero-section h1 {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.1s forwards;
+}
+
+.hero-section .subtitle {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.25s forwards;
+}
+
+.hero-meta {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.4s forwards;
+}
+
+.countdown-box {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 0.55s forwards;
+}
+
 /* Skip to content link */
 .skip-link {
     position: absolute;
@@ -377,7 +424,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-section h1 {
-    font-size: 2.75rem;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
     font-weight: 700;
     margin-bottom: 12px;
     color: var(--text-primary);
@@ -392,11 +439,19 @@ h1, h2, h3, h4 {
 }
 
 .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 12px;
-    justify-content: center;
+    justify-items: center;
     margin-bottom: 30px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-meta .meta-item:first-child {
+    grid-column: 1 / -1;
+    max-width: 100%;
 }
 
 .meta-item {
@@ -461,7 +516,7 @@ h1, h2, h3, h4 {
 }
 
 .countdown-number {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     color: var(--accent);
     font-family: 'JetBrains Mono', monospace;
@@ -475,7 +530,7 @@ h1, h2, h3, h4 {
 }
 
 .section-title {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -494,20 +549,31 @@ h1, h2, h3, h4 {
 
 /* === CARD === */
 .card {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-color);
+    background: rgba(15, 22, 41, 0.6);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(232, 160, 32, 0.08);
     border-radius: 12px;
     padding: 28px;
     margin-bottom: 20px;
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .card:hover {
     box-shadow: 0 4px 20px rgba(232, 160, 32, 0.08);
+    border-color: rgba(232, 160, 32, 0.15);
+}
+
+[data-theme="light"] .card {
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-color: rgba(184, 128, 10, 0.1);
 }
 
 [data-theme="light"] .card:hover {
     box-shadow: 0 4px 20px rgba(184, 128, 10, 0.08);
+    border-color: rgba(184, 128, 10, 0.18);
 }
 
 /* === FOCUS VISIBLE === */
@@ -620,7 +686,9 @@ h1, h2, h3, h4 {
 
 /* === PHASE BLOCKS (Collapsible) === */
 .phase-block {
-    background: var(--bg-surface);
+    background: rgba(15, 22, 41, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     margin-bottom: 16px;
@@ -630,6 +698,12 @@ h1, h2, h3, h4 {
 
 .phase-block:hover {
     border-color: rgba(232, 160, 32, 0.15);
+}
+
+[data-theme="light"] .phase-block {
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 [data-theme="light"] .phase-block:hover {
@@ -937,11 +1011,6 @@ blockquote {
     animation: fadeInUp 0.3s ease;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .back-to-top:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(232, 160, 32, 0.4);
@@ -1009,8 +1078,7 @@ blockquote {
     }
 
     .hero-meta {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .meta-item {
