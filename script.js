@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 60000);
 
     // === THEME TOGGLE ===
     const themeToggle = document.getElementById('themeToggle');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ring = document.querySelector('.progress-ring-fill');
         const ringText = document.getElementById('progressRingText');
         if (ring) {
-            const circumference = 2 * Math.PI * 25;
+            const circumference = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--progress-ring-circumference'));
             const offset = circumference - (percent / 100) * circumference;
             ring.style.strokeDashoffset = offset;
         }
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observerOptions = {
         root: null,
-        rootMargin: '-20% 0px -70% 0px',
+        rootMargin: '-80px 0px -70% 0px',
         threshold: 0
     };
 
