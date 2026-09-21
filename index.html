@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE CS & DA 2027 -- Ordered Study Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar" aria-hidden="false">
+    <div class="sidebar-header">
+        <h2>GATE 2027</h2>
+        <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode">
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+    </div>
+    <div class="progress-section">
+        <p class="progress-label">Progress</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p class="progress-text" id="progressText">0%</p>
+    </div>
+    <div class="progress-ring-section">
+        <svg class="progress-ring" width="60" height="60" viewBox="0 0 60 60">
+            <circle class="progress-ring-bg" cx="30" cy="30" r="25" />
+            <circle class="progress-ring-fill" cx="30" cy="30" r="25" />
+        </svg>
+        <span class="progress-ring-text" id="progressRingText">0%</span>
+    </div>
+    <nav class="sidebar-nav" role="navigation">
+        <a href="#start-here" class="nav-link active">START HERE</a>
+        <a href="#how-it-works" class="nav-link">How This Plan Works</a>
+        <a href="#emergency" class="nav-link emergency-nav">Emergency Protocols</a>
+        <a href="#phase1" class="nav-link phase-1">Phase 1: Foundation</a>
+        <a href="#non-negotiables" class="nav-link">Non-Negotiables</a>
+        <a href="#phase2" class="nav-link phase-2">Phase 2: Core CS</a>
+        <a href="#phase3" class="nav-link phase-3">Phase 3: DA-Only</a>
+        <a href="#phase4" class="nav-link phase-4">Phase 4: PYQ Marathon</a>
+        <a href="#phase5" class="nav-link phase-5">Phase 5: Mocks</a>
+        <a href="#phase6" class="nav-link phase-6">Phase 6: Final Sprint</a>
+        <a href="#reference" class="nav-link">Reference</a>
+    </nav>
+</aside>
+
+<!-- Hamburger menu button (mobile) -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+</button>
+<div class="sidebar-scrim" id="sidebarScrim"></div>
+
+<!-- Main Content -->
+<main class="main-content">
+
+    <!-- HEADER -->
+    <header class="hero-section" id="hero">
+        <h1>GATE CS & DA 2027</h1>
+        <p class="subtitle">Ordered Study Plan -- Follow the steps. Hit the targets. Move on.</p>
+        <div class="hero-meta">
+            <div class="meta-item">
+                <span class="meta-label">Goal</span>
+                <span class="meta-value">AIR &lt; 500 (65-70 marks) &rarr; IIT Madras M.Tech CSE</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Aspirational</span>
+                <span class="meta-value">AIR &lt; 100 (75-80 marks)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Papers</span>
+                <span class="meta-value">CS (primary) + DA (secondary)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Start</span>
+                <span class="meta-value">September 17, 2026</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Exam</span>
+                <span class="meta-value">Feb 6-21, 2027</span>
+            </div>
+        </div>
+        <div class="countdown-box" id="countdown">
+            <span class="countdown-label">Days until GATE 2027</span>
+            <span class="countdown-number" id="countdownNumber">--</span>
+        </div>
+    </header>
+
+    <!-- START HERE -->
+    <section class="section" id="start-here">
+        <h2 class="section-title">START HERE -- What To Do Right Now</h2>
+        <div class="card">
+            <ol class="ordered-list">
+                <li>Read this entire plan once (15 min)</li>
+                <li>Read execution_plan.md -- understand the full picture (15 min)</li>
+                <li>Read earning_plan.md -- understand the earning path (10 min)</li>
+                <li>Set up your study environment:
+                    <ul class="sub-list">
+                        <li>Install Anki (free flashcard app)</li>
+                        <li>Create error log (Google Sheet or notebook)</li>
+                        <li>Bookmark GATE Overflow, GO Classes, LeetCode</li>
+                        <li>Download NPTEL app</li>
+                    </ul>
+                </li>
+                <li>Start Step 1: Math Foundation (open NPTEL Discrete Math)</li>
+            </ol>
+            <div class="callout callout-green">
+                <strong>Your first week goal:</strong> Finish Discrete Math basics + Linear Algebra start + solve 10 PYQs
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW THIS PLAN WORKS -->
+    <section class="section" id="how-it-works">
+        <h2 class="section-title">How This Plan Works</h2>
+        <div class="card">
+            <ul class="feature-list">
+                <li><strong>Ordered steps</strong> -- Study in sequence. Each step builds on the previous.</li>
+                <li><strong>Goals, not hours</strong> -- Hit the target before moving on. Flexible timing (2 or 10 hrs/day).</li>
+                <li><strong>Both papers</strong> -- CS and DA share ~60% of content. Study shared topics ONCE. Embedded targets in every step.</li>
+            </ul>
+            <h3 class="sub-heading">Phase Quick Reference</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Weeks</th>
+                            <th>Steps</th>
+                            <th>What You Study</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="phase-1-row"><td>1. Foundation</td><td>1-4</td><td>Steps 1-2</td><td>Math + DSA</td></tr>
+                        <tr class="phase-2-row"><td>2. Core CS</td><td>5-12</td><td>Steps 3-5</td><td>DL, COA, OS, CN, DBMS, TOC, Compiler</td></tr>
+                        <tr class="phase-3-row"><td>3. DA-Only</td><td>10-13</td><td>Steps 6-8</td><td>ML, AI, Advanced Probability, Data Warehousing, Engg Math</td></tr>
+                        <tr class="phase-overlap-row"><td>2+3 Overlap</td><td>10-13</td><td>Steps 3-5 + 6-8</td><td>CS mornings, DA evenings</td></tr>
+                        <tr class="phase-4-row"><td>4. PYQ Marathon</td><td>14-18</td><td>Steps 9-10</td><td>All PYQs (CS + DA), 5-Pass Method</td></tr>
+                        <tr class="phase-5-row"><td>5. Mocks</td><td>18-20</td><td>Step 11</td><td>25+ full mocks, error analysis</td></tr>
+                        <tr class="phase-6-row"><td>6. Final Sprint</td><td>21</td><td>Step 12</td><td>Revision only, formula sheets, no new topics</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMERGENCY PROTOCOLS -->
+    <section class="section" id="emergency">
+        <h2 class="section-title">EMERGENCY PROTOCOLS</h2>
+        <div class="card">
+            <p class="callout callout-red"><em>If you fall behind, see this immediately -- don't wait until you're drowning.</em></p>
+
+            <div class="callout callout-orange">
+                <strong>Protocol 1 (1 Week Behind):</strong>
+                <ul>
+                    <li>Reduce earning to 5 hrs/wk (CP contests only)</li>
+                    <li>Skip one low-priority subject (Compiler or DL), use One-Shot videos</li>
+                    <li>Recovery time: 1 week</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-orange">
+                <strong>Protocol 2 (2+ Weeks Behind):</strong>
+                <ul>
+                    <li>Stop ALL earning; PYQ-first approach</li>
+                    <li>Focus on HIGH WEIGHTAGE only: PDS+Algo (22-28 marks), OS (7-10), DBMS (6-9), CN (7-10)</li>
+                    <li>Skip low-weightage: Compiler (4-5 marks), DL (4-7 marks); recovery: 2 weeks</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-blue">
+                <strong>Protocol 3 (College Exam Overlap, Nov-Dec):</strong>
+                <ul>
+                    <li>GATE drops to 2 hrs/day revision only (no new topics, no mocks)</li>
+                    <li>Anki + 5-10 problems daily; earning: CP contests only</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-purple">
+                <strong>Protocol 4 (Burnout):</strong>
+                <ul>
+                    <li>Take 1-2 days COMPLETELY OFF, resume 3 hrs/day for 3 days, then gradual return</li>
+                    <li>"Returning from distraction is an art" -- Himanshu Gupta (AIR 40)</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-red">
+                <strong>Protocol 5 (Scoring &lt;50 in Mocks):</strong>
+                <ul>
+                    <li>Identify top 3 weak subjects; dedicate 1 full week + 50+ PYQs to each</li>
+                    <li>Use Gate Smashers One-Shot videos; resume mocks after</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHASE 1: FOUNDATION -->
+    <section class="section" id="phase1">
+        <h2 class="section-title phase-1-color">PHASE 1: FOUNDATION (Week 1-4)</h2>
+        <div class="callout callout-green-light"><em>Build the base. Everything else depends on this.</em></div>
+
+        <div class="phase-block phase-1-border" id="step1">
+            <div class="phase-header" data-target="step1-content">
+                <h3>Step 1: Math Foundation (Week 1-2)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step1-content">
+                <p class="why-box"><strong>Why first:</strong> Math is foundational for both CS (12-16 marks) and DA (P&S + LA + Calc = 40% of DA marks). Without this, probability, ML, and algorithms won't make sense.</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Discrete Mathematics</strong>
+                        <ul>
+                            <li>Propositional logic, tautology, equivalence</li>
+                            <li>Sets, relations, functions</li>
+                            <li>Graph theory basics (planar graphs, Euler's formula, graph coloring)</li>
+                            <li>Recurrence relations</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs on discrete math. Score 70%+.</div>
+                    </li>
+                    <li>
+                        <strong>Linear Algebra</strong>
+                        <ul>
+                            <li>Matrix operations, transpose, inverse</li>
+                            <li>Determinants, rank, nullity</li>
+                            <li>Eigenvalues, eigenvectors</li>
+                            <li>Systems of linear equations</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs on LA. Score 70%+.</div>
+                    </li>
+                    <li>
+                        <strong>Probability & Statistics</strong>
+                        <ul>
+                            <li>Conditional probability, Bayes theorem</li>
+                            <li>Random variables, distributions (Binomial, Poisson, Normal, Exponential)</li>
+                            <li>Expectation, variance, covariance</li>
+                            <li>CLT, confidence intervals</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs on probability. Score 70%+.</div>
+                    </li>
+                    <li>
+                        <strong>Calculus</strong>
+                        <ul>
+                            <li>Limits, continuity, differentiability</li>
+                            <li>Maxima/minima, optimization</li>
+                            <li>Integration basics</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs on calculus. Score 70%+.</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve 80% of math PYQs from 2016-2026 papers without looking at notes.</div>
+                <div class="resources-box">
+                    <strong>Resources (free):</strong>
+                    <ul>
+                        <li>NPTEL: Discrete Math (IIT Madras), Linear Algebra (IIT Bombay), Probability (IIT Kharagpur)</li>
+                        <li>Textbook: Gilbert Strang's Linear Algebra (free PDF)</li>
+                        <li>Practice: GATE Overflow PYQs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-1-border" id="step2">
+            <div class="phase-header" data-target="step2-content">
+                <h3>Step 2: DSA Basics (Week 3-4)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step2-content">
+                <p class="why-box"><strong>Why second:</strong> DSA is the highest-weight CS topic (22-28 marks combined with Algorithms). It also powers your earning (CP contests, freelancing).</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>C/Python Tracing</strong>
+                        <ul>
+                            <li>Read code, trace execution, predict output</li>
+                            <li>Pointers, arrays, recursion</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 code-tracing PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Arrays & Linked Lists</strong>
+                        <ul>
+                            <li>Searching, sorting (bubble, selection, insertion, merge, quick)</li>
+                            <li>Time complexity analysis</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Implement all sorting algorithms. Solve 15 PYQs.</div>
+                    </li>
+                    <li>
+                        <strong>Stacks & Queues</strong>
+                        <ul>
+                            <li>Implementation, applications</li>
+                            <li>Expression evaluation, infix to postfix</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Trees</strong>
+                        <ul>
+                            <li>Binary trees, BST, traversals (inorder, preorder, postorder)</li>
+                            <li>Heap operations</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Graphs</strong>
+                        <ul>
+                            <li>BFS, DFS</li>
+                            <li>Shortest path (Dijkstra, Bellman-Ford)</li>
+                            <li>MST (Kruskal, Prim)</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Dynamic Programming</strong>
+                        <ul>
+                            <li>Knapsack, LCS, LIS</li>
+                            <li>Memoization vs tabulation</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs + 20 LeetCode easy/medium</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You have solved 75+ PDSA PYQs and 50+ LeetCode problems. Can implement all data structures from memory.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NON-NEGOTIABLES -->
+    <section class="section" id="non-negotiables">
+        <h2 class="section-title">NON-NEGOTIABLES -- Build These Habits Now</h2>
+        <div class="card">
+            <h3 class="sub-heading">Daily Non-Negotiables (Every Single Day)</h3>
+            <p><em>Regardless of which phase you're in:</em></p>
+            <div class="checklist" id="dailyChecklist">
+                <label class="check-item"><input type="checkbox" data-key="daily-1"><span>Anki flashcard review (10 min during travel)</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-2"><span>Aptitude practice (30 min -- travel or break time)</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-3"><span>Solve 2-3 GATE-level problems from current subject</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-4"><span>Deep study block: theory + practice</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-5"><span>Make short notes for today's topics (10 min)</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-6"><span>Track errors in error log</span></label>
+                <label class="check-item"><input type="checkbox" data-key="daily-7"><span>Plan tomorrow before sleeping (5 min)</span></label>
+            </div>
+            <div class="callout callout-yellow"><strong>Minimum:</strong> 4 hours even on worst days (No-Zero-Day Rule)</div>
+
+            <h3 class="sub-heading">Weekly Non-Negotiables (Every Week)</h3>
+            <div class="checklist" id="weeklyChecklist">
+                <label class="check-item"><input type="checkbox" data-key="weekly-1"><span>1 full PYQ section (40-65 questions, timed)</span></label>
+                <label class="check-item"><input type="checkbox" data-key="weekly-2"><span>Subject-wise PYQ for current week's subject</span></label>
+                <label class="check-item"><input type="checkbox" data-key="weekly-3"><span>10-15 LeetCode problems (40-60/month)</span></label>
+                <label class="check-item"><input type="checkbox" data-key="weekly-4"><span>Review week's errors and update weak areas list</span></label>
+                <label class="check-item"><input type="checkbox" data-key="weekly-5"><span>Create/update short notes for week's subjects</span></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHASE 2: CORE CS -->
+    <section class="section" id="phase2">
+        <h2 class="section-title phase-2-color">PHASE 2: CORE CS SUBJECTS (Week 5-12)</h2>
+        <div class="callout callout-blue-light"><em>Study these in order. Each builds on the previous.</em></div>
+
+        <div class="phase-block phase-2-border" id="step3">
+            <div class="phase-header" data-target="step3-content">
+                <h3>Step 3: Digital Logic + Computer Organization (Week 5-6)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step3-content">
+                <p class="why-box"><strong>Why together:</strong> They share the same ecosystem (binary, gates, circuits).</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Digital Logic</strong>
+                        <ul>
+                            <li>Boolean algebra, K-map simplification</li>
+                            <li>Combinational circuits (mux, decoder, adder)</li>
+                            <li>Sequential circuits (flip-flops, counters, registers)</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Computer Organization & Architecture</strong>
+                        <ul>
+                            <li>Number systems, 2's complement, floating-point</li>
+                            <li>CPU design, instruction cycles</li>
+                            <li>Memory hierarchy, cache (direct, associative, set-associative)</li>
+                            <li>Cache addressing, hit/miss/AMAT</li>
+                            <li>TLB, page table</li>
+                            <li>Pipeline hazards, interrupts, DMA</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 20 PYQs</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve cache addressing, pipeline hazard, and K-map problems accurately.</div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-2-border" id="step4">
+            <div class="phase-header" data-target="step4-content">
+                <h3>Step 4: Operating Systems + Computer Networks (Week 7-8)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step4-content">
+                <p class="why-box"><strong>Why together:</strong> They share security, protocols, and system-level concepts.</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Operating Systems</strong>
+                        <ul>
+                            <li>Process management, scheduling (FCFS, SJF, SRTF, RR)</li>
+                            <li>Synchronization (semaphores, mutex, P/V)</li>
+                            <li>Deadlock (conditions, Banker's algorithm)</li>
+                            <li>Memory management (paging, segmentation, page replacement)</li>
+                            <li>Virtual memory, effective access time</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 20 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Computer Networks</strong>
+                        <ul>
+                            <li>OSI/TCP-IP model</li>
+                            <li>IP addressing, subnetting, CIDR</li>
+                            <li>IPv4 fragmentation</li>
+                            <li>Routing (distance vector, link state, longest prefix)</li>
+                            <li>TCP (congestion control, sliding window, slow start)</li>
+                            <li>Ethernet, MAC, CRC</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 20 PYQs</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve scheduling, semaphore, subnetting, and TCP window problems accurately.</div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-2-border" id="step5">
+            <div class="phase-header" data-target="step5-content">
+                <h3>Step 5: DBMS + TOC + Compiler (Week 9-10)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step5-content">
+                <p class="why-box"><strong>Why together:</strong> DBMS and Compiler share formal language concepts (relational algebra, grammars).</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Database Management Systems</strong>
+                        <ul>
+                            <li>ER model, relational model</li>
+                            <li>SQL (selection, join, grouping, nesting)</li>
+                            <li>Normalization (1NF-BCNF), functional dependencies</li>
+                            <li>B/B+ tree indexing, block calculations</li>
+                            <li>Transaction management, serializability</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Theory of Computation</strong>
+                        <ul>
+                            <li>Regular expressions -> DFA/NFA</li>
+                            <li>Finite automata, minimization</li>
+                            <li>Context-free grammars, derivations, ambiguity</li>
+                            <li>Pushdown automata</li>
+                            <li>Pumping lemma</li>
+                            <li>Decidability, undecidability</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Compiler Design</strong>
+                        <ul>
+                            <li>Lexical analysis, token recognition</li>
+                            <li>FIRST/FOLLOW, predictive parsing</li>
+                            <li>LL/LR parsers</li>
+                            <li>Syntax-directed translation</li>
+                            <li>Runtime environments</li>
+                            <li>Intermediate code generation</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve SQL queries, build parse tables, and convert regex to DFA.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHASE 3: DA-ONLY -->
+    <section class="section" id="phase3">
+        <h2 class="section-title phase-3-color">PHASE 3: DA-ONLY SUBJECTS (Week 10-13)</h2>
+        <div class="callout callout-purple-light"><em>These topics are ONLY in DA, not in CS. Start overlapping with Phase 2.</em></div>
+        <p class="note-box"><strong>Note:</strong> Weeks 10-13 overlap with Phase 2. This is intentional -- complete CS Steps 3-4 before starting DA Step 7. You study CS subjects in the morning and DA subjects in the evening during this overlap period.</p>
+
+        <div class="phase-block phase-3-border" id="step6">
+            <div class="phase-header" data-target="step6-content">
+                <h3>Step 6: Engineering Math Advanced (Week 12-13)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step6-content">
+                <p class="why-box"><strong>Why now:</strong> Builds on Phase 1 math foundation and DA linear algebra. Bridges CS and DA phases.</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Advanced Discrete Math</strong>
+                        <ul>
+                            <li>Graph theory (planar graphs, Euler's formula, graph coloring, matching)</li>
+                            <li>Combinatorics (permutations, combinations, inclusion-exclusion)</li>
+                            <li>Recurrence relations (master theorem)</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Advanced Probability</strong>
+                        <ul>
+                            <li>Bayes theorem (complex scenarios)</li>
+                            <li>Joint distributions, marginal distributions</li>
+                            <li>Conditional expectation</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 PYQs</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve 80% of Engineering Math PYQs from 2016-2026.</div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-3-border" id="step7">
+            <div class="phase-header" data-target="step7-content">
+                <h3>Step 7: Machine Learning + AI (Week 10-12)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step7-content">
+                <p class="why-box"><strong>Why now:</strong> You need probability (Step 1) and PDSA (Step 2) as prerequisites.</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Machine Learning</strong>
+                        <ul>
+                            <li>Linear regression, Ridge/Lasso</li>
+                            <li>Logistic regression</li>
+                            <li>SVM, Naive Bayes</li>
+                            <li>Decision trees, Random forests</li>
+                            <li>K-means, hierarchical clustering</li>
+                            <li>PCA, dimensionality reduction</li>
+                            <li>Neural networks (MLP, ReLU)</li>
+                            <li>Classification metrics (accuracy, precision, recall, F1, ROC)</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 15 DA ML PYQs + Kaggle Titanic competition</div>
+                    </li>
+                    <li>
+                        <strong>AI (Artificial Intelligence)</strong>
+                        <ul>
+                            <li>Propositional/predicate logic</li>
+                            <li>Uninformed search (BFS, DFS)</li>
+                            <li>Informed search (A*, greedy best-first)</li>
+                            <li>Adversarial search (minimax, alpha-beta pruning)</li>
+                            <li>Bayesian networks</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 10 DA AI PYQs</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can build a scikit-learn pipeline and solve A*/minimax problems.</div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-3-border" id="step8">
+            <div class="phase-header" data-target="step8-content">
+                <h3>Step 8: Advanced Probability & Data Warehousing (Week 13)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step8-content">
+                <p class="why-box"><strong>Why last:</strong> These are DA-specific deep dives.</p>
+                <h4>Study in this order:</h4>
+                <ol class="study-order">
+                    <li>
+                        <strong>Advanced Probability (DA depth)</strong>
+                        <ul>
+                            <li>All distributions and their transformations</li>
+                            <li>CDF/quantile manipulation</li>
+                            <li>Exponential memorylessness</li>
+                            <li>CLT applications</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 20 DA probability PYQs</div>
+                    </li>
+                    <li>
+                        <strong>Data Warehousing</strong>
+                        <ul>
+                            <li>OLAP, star schema, snowflake schema</li>
+                            <li>ETL process</li>
+                            <li>Data mining basics</li>
+                        </ul>
+                        <div class="target-box"><strong>Target:</strong> Solve 5 DA PYQs on warehousing</div>
+                    </li>
+                </ol>
+                <div class="done-when"><strong>Done when:</strong> You can solve 80% of DA probability and warehousing PYQs.</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PHASE 4: PYQ MARATHON -->
+    <section class="section" id="phase4">
+        <h2 class="section-title phase-4-color">PHASE 4: PYQ MARATHON (Week 14-18)</h2>
+        <div class="callout callout-orange-light"><em>This is where you transform knowledge into exam-ready skill.</em></div>
+
+        <div class="phase-block phase-4-border" id="step9">
+            <div class="phase-header" data-target="step9-content">
+                <h3>Step 9: CS PYQs (Week 14-16)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step9-content">
+                <p><strong>The 5-Pass Methodology:</strong></p>
+                <div class="pass-block">
+                    <h4>Pass 1 -- Coverage (Week 14)</h4>
+                    <ul>
+                        <li>Solve at least 1 problem from every syllabus bullet</li>
+                        <li>Don't worry about speed, focus on understanding</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Complete coverage of all topics. 50+ problems solved.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 2 -- Recurrence (Week 15)</h4>
+                    <ul>
+                        <li>Group all PYQs by concept, not by year</li>
+                        <li>Example: All cache-address questions together, all DFA questions together</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Identify your top 5 weak concept areas.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 3 -- Difficulty (Week 15)</h4>
+                    <ul>
+                        <li>Categorize: direct recall / one-step application / multi-step numerical / statement-MSQ / code execution</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Solve all direct recall and one-step problems. Mark multi-step for later.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 4 -- Timed Mixed Sets (Week 16)</h4>
+                    <ul>
+                        <li>Full-paper sessions (3 hours, 65 questions)</li>
+                        <li>Test topic-switching, not just knowledge</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Score 55+ in timed conditions.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 5 -- Error Taxonomy (Week 16)</h4>
+                    <ul>
+                        <li>Classify every error: concept gap / formula gap / calculation error / interpretation error / time pressure / careless reading</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Error log with 50+ entries. Top 3 error types identified.</div>
+                </div>
+                <div class="done-when"><strong>Done when:</strong> You've solved all CS PYQs 2016-2026, scored 55+ in timed conditions, and have a clear error taxonomy.</div>
+            </div>
+        </div>
+
+        <div class="phase-block phase-4-border" id="step10">
+            <div class="phase-header" data-target="step10-content">
+                <h3>Step 10: DA PYQs (Week 16-18)</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step10-content">
+                <p><strong>Same 5-Pass Methodology, applied to DA:</strong></p>
+                <div class="pass-block">
+                    <h4>Pass 1 -- Coverage (Week 16)</h4>
+                    <ul>
+                        <li>Solve all DA papers 2024-2026</li>
+                        <li>Focus on: P&S (55 marks), PDSA (50 marks), ML (44 marks)</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Solve 150+ DA problems.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 2 -- Recurrence (Week 17)</h4>
+                    <ul>
+                        <li>Group by concept</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Identify top 5 weak DA areas.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 3 -- Difficulty (Week 17)</h4>
+                    <ul>
+                        <li>Categorize: direct recall / one-step application / multi-step numerical / statement-MSQ / code execution</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Solve all direct recall and one-step problems. Mark multi-step for later.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 4 -- Timed Mixed Sets (Week 17)</h4>
+                    <ul>
+                        <li>Full DA papers in 3 hours</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Score 50+ in timed conditions.</div>
+                </div>
+                <div class="pass-block">
+                    <h4>Pass 5 -- Error Taxonomy (Week 18)</h4>
+                    <ul>
+                        <li>Classify every error: concept gap / formula gap / calculation error / interpretation error / time pressure / careless reading</li>
+                    </ul>
+                    <div class="target-box"><strong>Target:</strong> Error log with 30+ DA entries. Top 3 error types identified.</div>
+                </div>
+                <div class="done-when"><strong>Done when:</strong> You've solved all DA PYQs 2024-2026, scored 50+ in timed conditions, and have a clear error taxonomy.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHASE 5: MOCK TESTS -->
+    <section class="section" id="phase5">
+        <h2 class="section-title phase-5-color">PHASE 5: MOCK TESTS (Week 18-20)</h2>
+        <div class="callout callout-red-light"><em>Test, analyze, improve. Repeat.</em></div>
+
+        <div class="phase-block phase-5-border" id="step11">
+            <div class="phase-header" data-target="step11-content">
+                <h3>Step 11: Full Mock Tests</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step11-content">
+                <p><strong>Target:</strong> 25+ full mocks total before exam.</p>
+                <h4>Mock Sources (free/budget):</h4>
+                <ul>
+                    <li>GATE Overflow test series (most recommended)</li>
+                    <li>GO Classes test series</li>
+                    <li>Made Easy (large competition pool)</li>
+                    <li>ACE Engineering Academy</li>
+                </ul>
+                <h4>After EVERY mock (2-3 hours analysis):</h4>
+                <ol>
+                    <li>Re-solve every wrong question</li>
+                    <li>Classify errors (concept gap / formula gap / calculation / interpretation / time / careless)</li>
+                    <li>Update weak areas list</li>
+                    <li>Review related concepts</li>
+                    <li>Add to formula sheet if needed</li>
+                </ol>
+                <h4>Scoring Targets:</h4>
+                <ul>
+                    <li>Week 18: Score 50-55 (normal starting point)</li>
+                    <li>Week 19: Score 55-60</li>
+                    <li>Week 20: Score 60-65</li>
+                    <li>If scoring &lt;50 in Week 20: Emergency Protocol 5 (see above)</li>
+                </ul>
+                <div class="done-when"><strong>Done when:</strong> 25+ mocks completed, average score 60+, weak areas identified and revised.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHASE 6: FINAL SPRINT -->
+    <section class="section" id="phase6">
+        <h2 class="section-title phase-6-color">PHASE 6: FINAL SPRINT (Week 21, Exam Week)</h2>
+        <div class="callout callout-gold-light"><em>No new topics. No new problems. Just revision.</em></div>
+
+        <div class="phase-block phase-6-border" id="step12">
+            <div class="phase-header" data-target="step12-content">
+                <h3>Step 12: Revision Only</h3>
+                <span class="toggle-icon">&#9660;</span>
+            </div>
+            <div class="phase-content open" id="step12-content">
+                <h4>Daily targets:</h4>
+                <ul>
+                    <li>Review formula sheets (10-11 A4 pages, one per subject)</li>
+                    <li>Re-solve wrong questions from error log</li>
+                    <li>1-2 hours of light problem solving (don't overdo)</li>
+                    <li>Sleep 7+ hours</li>
+                </ul>
+                <div class="callout callout-red">
+                    <strong>What NOT to do:</strong>
+                    <ul>
+                        <li>No new topics</li>
+                        <li>No new problems (just re-solve old ones)</li>
+                        <li>No new earning activities</li>
+                        <li>No panic studying</li>
+                    </ul>
+                </div>
+                <h4>Exam Day Order:</h4>
+                <ol>
+                    <li><strong>General Aptitude</strong> (0-20 min) -- harvest easy 12-15 marks</li>
+                    <li><strong>Strongest subject</strong> (20-80 min) -- bank marks</li>
+                    <li><strong>Medium difficulty</strong> (80-140 min) -- steady progress</li>
+                    <li><strong>Hardest subject</strong> (140-170 min) -- attempt what you can</li>
+                    <li><strong>Review</strong> (170-180 min) -- check for silly mistakes</li>
+                </ol>
+                <h4>Question Type Rules:</h4>
+                <ul>
+                    <li><strong>MCQ:</strong> Only attempt if 2+ options can be eliminated</li>
+                    <li><strong>MSQ:</strong> Only if 100% sure (no partial credit)</li>
+                    <li><strong>NAT:</strong> ALWAYS attempt (no negative marking)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCE -->
+    <section class="section" id="reference">
+        <h2 class="section-title">REFERENCE</h2>
+
+        <div class="card">
+            <h3 class="sub-heading">Subject Weightage</h3>
+
+            <h4 class="phase-1-color">CS Weightage</h4>
+            <ul class="weightage-list">
+                <li><strong>PDS + Algorithms:</strong> 22-28 marks | 24% time | PRIORITY 1</li>
+                <li><strong>Engineering Mathematics:</strong> 12-16 marks | 13% time | PRIORITY 1</li>
+                <li><strong>COA:</strong> 8-12 marks | 11% time | PRIORITY 1</li>
+                <li><strong>OS:</strong> 7-10 marks | 9% time | PRIORITY 1</li>
+                <li><strong>ToC:</strong> 6-10 marks | 9% time | PRIORITY 1</li>
+                <li><strong>DBMS:</strong> 6-9 marks | 8% time | PRIORITY 1</li>
+                <li><strong>CN:</strong> 7-10 marks | 9% time | PRIORITY 1</li>
+                <li><strong>Compiler:</strong> 4-7 marks | 5% time | PRIORITY 2</li>
+                <li><strong>Digital Logic:</strong> 4-7 marks | 3% time | PRIORITY 2</li>
+                <li><strong>General Aptitude:</strong> 15 marks (fixed) | 9% time | FIXED</li>
+            </ul>
+            <div class="callout callout-green"><strong>Rule:</strong> Prepare all P1 domains to minimum competency before over-optimizing any P2 domain.</div>
+
+            <h4 class="phase-3-color">DA Weightage</h4>
+            <ul class="weightage-list">
+                <li><strong>Probability & Statistics:</strong> 21.6% (55 marks) | 22% time | PRIORITY 1</li>
+                <li><strong>PDSA:</strong> 19.6% (50 marks) | 18% time | PRIORITY 1</li>
+                <li><strong>Machine Learning:</strong> 17.3% (44 marks) | 16% time | PRIORITY 1</li>
+                <li><strong>DBMS:</strong> 14.1% (36 marks) | 14% time | PRIORITY 1</li>
+                <li><strong>Linear Algebra:</strong> 11.8% (30 marks) | 12% time | PRIORITY 1</li>
+                <li><strong>AI:</strong> 8.6% (22 marks) | 8% time | PRIORITY 2</li>
+                <li><strong>Calculus & Optimization:</strong> 7.1% (18 marks) | 10% time | PRIORITY 1</li>
+            </ul>
+            <div class="callout callout-purple"><strong>Key:</strong> P&amp;S + PDSA + ML = 58.5% of DA paper. These three alone can fetch 50+ marks out of 85.</div>
+
+            <h4 class="phase-4-color">CS + DA Overlap (Study Once, Score Twice)</h4>
+            <p><strong>Shared topics (study ONCE):</strong></p>
+            <ul>
+                <li>PDSA / DSA: CSE 22-28 marks | DA 50 marks</li>
+                <li>DBMS: CSE 8-10 marks | DA 36 marks</li>
+                <li>Engineering Math: CSE 12-15 marks | DA P&amp;S+LA+Calc = 103 marks</li>
+                <li>Probability: Part of Math (CSE) | DA 55 marks (DA goes MUCH deeper)</li>
+            </ul>
+            <p><strong>DA-only topics (dedicate DA time):</strong></p>
+            <ul>
+                <li>Machine Learning: 44 marks | No CSE overlap</li>
+                <li>AI (search, logic, Bayes nets): 22 marks | No CSE overlap</li>
+                <li>Advanced Probability: Part of 55 DA marks | Basic probability only in CSE</li>
+                <li>Data Warehousing: Part of 36 DA marks | No CSE overlap</li>
+                <li>Linear Algebra (deep): 30 marks | Basic LA only in CSE</li>
+            </ul>
+            <p><strong>CS-only topics (no DA relevance):</strong> OS, CN, COA, Digital Logic, Compiler, TOC</p>
+            <div class="callout callout-orange"><strong>Key Insight:</strong> ~40% of DA marks come from topics with ZERO CSE overlap. These require separate study blocks. The remaining 60% shares significant overlap with CSE.</div>
+        </div>
+
+        <div class="card">
+            <h3 class="sub-heading">Tools & Resources</h3>
+            <h4>Formula Sheets</h4>
+            <p>Build one A4 page per subject during study. The act of condensing forces active recall.</p>
+            <p><strong>10-11 pages total:</strong></p>
+            <ol>
+                <li>Discrete Math</li>
+                <li>Linear Algebra</li>
+                <li>Probability & Statistics</li>
+                <li>Calculus</li>
+                <li>PDSA (sorting complexities, data structure operations)</li>
+                <li>Digital Logic (Boolean theorems, circuit properties)</li>
+                <li>COA (cache formulas, pipeline equations)</li>
+                <li>OS (scheduling, page replacement, deadlock)</li>
+                <li>CN (subnetting, TCP window, CRC)</li>
+                <li>DBMS (normalization rules, SQL syntax)</li>
+                <li>TOC (pumping lemma, decidability table)</li>
+            </ol>
+
+            <h4>Spaced Repetition Revision</h4>
+            <p>Don't cram. Review at intervals:</p>
+            <ul>
+                <li><strong>Revision 1:</strong> 24 hours after covering a topic -- review notes, solve 5 PYQs (20 min)</li>
+                <li><strong>Revision 2:</strong> 7 days after -- re-solve hardest 5 PYQs without notes (30 min)</li>
+                <li><strong>Revision 3:</strong> End of subject's month -- complete subject test timed (60-90 min)</li>
+                <li><strong>Revision 4:</strong> January 2027 -- formula sheet review + re-solve wrong questions (45-60 min per subject)</li>
+            </ul>
+
+            <h4>All Resources</h4>
+            <ul>
+                <li><strong>NPTEL:</strong> Discrete Math (IIT Madras), Linear Algebra (IIT Bombay), Probability (IIT Kharagpur), ML (IIT Kharagpur), DBMS (IIT Bombay), Intro to ML (IIT Madras)</li>
+                <li><strong>Textbooks:</strong> Introduction to Linear Algebra -- Gilbert Strang; Introduction to Probability -- Bertsekas & Tsitsiklis; Database System Concepts -- Silberschatz et al.; Pattern Recognition and ML -- Bishop; An Introduction to Statistical Learning -- James, Witten, Hastie</li>
+                <li><strong>Practice:</strong> GATE Overflow, GO Classes, LeetCode, HackerRank, Kaggle, SQLZoo</li>
+                <li><strong>PYQs:</strong> GATE official website, GATE Overflow, GO Classes (DA mocks), GeeksforGeeks GATE DA section</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="sub-heading">Rules</h3>
+            <h4>19 Don't Rules</h4>
+            <ol class="rules-list">
+                <li>Do NOT buy coaching material (free resources are enough)</li>
+                <li>Do NOT skip General Aptitude (15 easy marks)</li>
+                <li>Do NOT study &gt;1 subject/day during college weekdays</li>
+                <li>Do NOT skip Anki review (5 min/day beats 5 hrs re-study)</li>
+                <li>Do NOT earn &gt;20 hrs/week (GATE is priority #1)</li>
+                <li>Do NOT start big projects in Phase 5-6</li>
+                <li>Do NOT skip mock tests</li>
+                <li>Do NOT compare with full-time aspirants (you have college)</li>
+                <li>Do NOT skip sleep (7+ hrs non-negotiable)</li>
+                <li>Do NOT study new topics in last 2 weeks</li>
+                <li>Do NOT switch resources mid-prep</li>
+                <li>Do NOT skip making short notes while studying</li>
+                <li>Do NOT delay PYQs until all subjects done (solve after EACH)</li>
+                <li>Do NOT ignore mock analysis</li>
+                <li>Do NOT use phone during study blocks</li>
+                <li>Do NOT do AI micro-tasks INSTEAD OF GATE study</li>
+                <li>Do NOT skip CodeChef/LeetCode contests</li>
+                <li>Do NOT take non-CS freelancing clients</li>
+                <li>Do NOT start new earning in Phase 5-6</li>
+            </ol>
+        </div>
+
+        <div class="card key-insight-card">
+            <h3 class="sub-heading">KEY INSIGHT</h3>
+            <blockquote>
+                "The strongest repetition is <strong>structural</strong>, not literal. A question may reappear with a different graph, different numbers, different code fragment, different schema. The invariant is: <strong>definition &rarr; invariant &rarr; calculation &rarr; conclusion</strong>. Memorizing 'Question 42 from 2016' is low-value. Memorizing the <em>template</em> behind Question 42 is high-value."
+            </blockquote>
+            <p class="footer-note">Created from execution_plan.md. This is your ordered study guide -- follow the steps, hit the targets, and you'll be ready for GATE 2027.</p>
+        </div>
+    </section>
+
+</main>
+
+<!-- Back to top button -->
+<button class="back-to-top" id="backToTop" title="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
