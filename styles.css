@@ -149,7 +149,7 @@ body > * {
 
 .countdown-box {
     opacity: 0;
-    animation: fadeInUp 0.6s ease 0.55s forwards;
+    animation: fadeInUp 0.6s ease 0.55s forwards, countdownPulse 4s ease-in-out 1.2s infinite alternate;
 }
 
 /* Skip to content link */
@@ -500,7 +500,6 @@ h1, h2, h3, h4 {
     border: 1px solid rgba(100, 170, 180, 0.15);
     border-radius: 16px;
     padding: 24px 48px;
-    animation: countdownPulse 4s ease-in-out infinite alternate;
 }
 
 @keyframes countdownPulse {
