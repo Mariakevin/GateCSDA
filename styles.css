@@ -460,6 +460,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 900px) {
     .main-content {
+        width: 100%;
         margin-left: 0;
     }
 }
@@ -1199,6 +1200,7 @@ blockquote {
     }
 
     .main-content {
+        width: 100%;
         margin-left: 0;
         padding: 24px 20px;
         padding-top: 70px;
