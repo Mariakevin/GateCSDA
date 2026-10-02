@@ -7,6 +7,8 @@
 **Papers:** CS (primary) + DA (secondary)
 **Start:** September 17, 2026 | **Exam:** Feb 6-21, 2027 (~5 months)
 
+**Assumption:** this schedule assumes near-full attendance. Expect to lose 2-3 weeks to illness, exams or slippage -- when that happens use Emergency Protocol 1 or 2 rather than restarting the calendar.
+
 ---
 
 ## START HERE -- What To Do Right Now
@@ -39,7 +41,7 @@
 | 3. DA-Only | 10-13 | Steps 6-8 | ML, AI, Advanced Probability, Data Warehousing, Engg Math |
 | 2+3 Overlap | 10-13 | Steps 3-5 + 6-8 | CS mornings, DA evenings |
 | 4. PYQ Marathon | 14-18 | Steps 9-10 | All PYQs (CS + DA), 5-Pass Method |
-| 5. Mocks | 18-20 | Step 11 | 25+ full mocks, error analysis |
+| 5. Mocks | 18-20 | Step 11 | 12-15 full mocks, error analysis |
 | 6. Final Sprint | 21 | Step 12 | Revision only, formula sheets, no new topics |
 
 ---
@@ -77,6 +79,8 @@
 > Build the base. Everything else depends on this.
 
 ### Step 1: Math Foundation (Week 1-2)
+
+**Before anything else:** download and read the official GATE syllabus PDF for both CS and DA (gate.iitk.ac.in or the organising IIT's site) and tick off which topics you already know. Note the 2027 syllabus trim in Computer Networks, COA and Digital Logic -- study only the current syllabus, not old videos covering removed topics.
 
 **Why first:** Math is foundational for both CS (12-15 marks) and DA (P&S + LA + Calc = 40% of DA marks). Without this, probability, ML, and algorithms won't make sense.
 
@@ -181,6 +185,7 @@ Regardless of which phase you're in:
 3. [ ] 10-15 LeetCode problems (40-60/month)
 4. [ ] Review week's errors and update weak areas list
 5. [ ] Create/update short notes for week's subjects
+6. [ ] One fixed day each week (pick your lightest day) is REVISION ONLY for older subjects -- re-solve PYQs / redo marked errors from subjects finished 2+ weeks ago. No new topics that day. Anki covers recent material only; this keeps weeks 1-13 alive.
 
 ---
 
@@ -426,13 +431,15 @@ Regardless of which phase you're in:
 
 ### Step 11: Full Mock Tests
 
-**Target:** 25+ full mocks total before exam.
+**Target:** 12-15 full-length mocks across weeks 18-20 (~4-5 per week, one every 1-2 days), each followed by a full 2-3 hour analysis session -- re-solve every wrong question, classify the error, update weak areas. Analysis quality matters more than mock count: if a week gets tight, cut the mock count, never the analysis.
 
 **Mock Sources (free/budget):**
 - GATE Overflow test series (most recommended)
 - GO Classes test series
 - Made Easy (large competition pool)
 - ACE Engineering Academy
+
+Pick a series that reports an All-India rank estimate, not just a raw score -- your score targets below are absolute numbers, but rank is what actually decides your admission.
 
 **After EVERY mock (2-3 hours analysis):**
 1. Re-solve every wrong question
@@ -447,7 +454,7 @@ Regardless of which phase you're in:
 - Week 20: Score 60-65
 - If scoring <50 in Week 20: Emergency Protocol 5 (see above)
 
-**Done when:** 25+ mocks completed, average score 60+, weak areas identified and revised.
+**Done when:** 12-15 mocks completed, average score 60+, weak areas identified and revised.
 
 ---
 
