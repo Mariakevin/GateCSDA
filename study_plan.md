@@ -173,8 +173,9 @@ Regardless of which phase you're in:
 3. [ ] Solve 2-3 GATE-level problems from current subject
 4. [ ] Deep study block: theory + practice
 5. [ ] Make short notes for today's topics (10 min)
-6. [ ] Track errors in error log
+6. [ ] Track errors in error log -- for each one write a single line: "Why did this step work, and what change to the question would break it?"
 7. [ ] Plan tomorrow before sleeping (5 min)
+8. [ ] Open every study session with 5 minutes of closed-book recall: blank sheet, write yesterday's formulas and concepts from memory, THEN check your notes. Testing old material first makes the new material stick.
 
 **Minimum:** 4 hours even on worst days (No-Zero-Day Rule)
 
@@ -186,6 +187,9 @@ Regardless of which phase you're in:
 4. [ ] Review week's errors and update weak areas list
 5. [ ] Create/update short notes for week's subjects
 6. [ ] One fixed day each week (pick your lightest day) is REVISION ONLY for older subjects -- re-solve PYQs / redo marked errors from subjects finished 2+ weeks ago. No new topics that day. Anki covers recent material only; this keeps weeks 1-13 alive.
+7. [ ] This week's timed PYQ section is MIXED: shuffle at least 3 topics together (e.g. paging + scheduling + caching), never drill topic-by-topic. Study in prerequisite order, but always TEST interleaved.
+
+**Why these habits (evidence):** recall-before-study, mixed practice and one-line self-explanations are the three additions backed by meta-analysis -- practice testing and spacing rate HIGH, interleaving and self-explanation MODERATE, in Dunlosky et al.'s review of 10 study techniques ([PSPI 2013](https://doi.org/10.1177/1529100612453266)). Mixed practice beat blocked practice 61% vs 38% on a month-delayed test ([Rohrer et al. 2019 RCT](https://doi.org/10.1037/edu0000367)); self-explanation g = 0.55 ([Bisra et al. 2018](https://doi.org/10.1007/s10648-018-9434-x)). Deliberately NOT used: rereading, highlighting, learning styles, Pomodoro-as-doctrine -- all low or no utility in the same review ([Pashler et al. 2008](https://doi.org/10.1111/j.1539-6053.2009.01038.x) on learning styles).
 
 ---
 
@@ -447,6 +451,7 @@ Pick a series that reports an All-India rank estimate, not just a raw score -- y
 3. Update weak areas list
 4. Review related concepts
 5. Add to formula sheet if needed
+6. For each wrong question write one line: "Why did this step work, and what change to the question would break it?" (finds the transfer gap that plain re-solving misses)
 
 **Scoring Targets:**
 - Week 18: Score 50-55 (normal starting point)
@@ -595,7 +600,7 @@ Don't cram. Review at intervals:
 6. Do NOT start big projects in Phase 5-6
 7. Do NOT skip mock tests
 8. Do NOT compare with full-time aspirants (you have college)
-9. Do NOT skip sleep (7+ hrs non-negotiable)
+9. Do NOT skip sleep (7+ hrs non-negotiable) -- and never pull an all-nighter: one night of sleep loss before learning costs more than any study technique adds
 10. Do NOT study new topics in last 2 weeks
 11. Do NOT switch resources mid-prep
 12. Do NOT skip making short notes while studying
