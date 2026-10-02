@@ -50,13 +50,13 @@
 
 **Protocol 1 (1 Week Behind):**
 - Reduce earning to 5 hrs/wk (CP contests only)
-- Skip one low-priority subject (Compiler or DL), use One-Shot videos
+- Skip one low-priority subject (Compiler), use One-Shot videos
 - Recovery time: 1 week
 
 **Protocol 2 (2+ Weeks Behind):**
 - Stop ALL earning; PYQ-first approach
-- Focus on HIGH WEIGHTAGE only: PDS+Algo (22-28 marks), OS (7-10), DBMS (6-9), CN (7-10)
-- Skip low-weightage: Compiler (4-5 marks), DL (4-7 marks); recovery: 2 weeks
+- Focus on HIGH WEIGHTAGE only: PDS+Algo (15-22 marks), Engg Math (12-15), OS (7-9), CN (6-9)
+- Skip low-weightage: Compiler (5-8 marks); recovery: 2 weeks
 
 **Protocol 3 (College Exam Overlap, Nov-Dec):**
 - GATE drops to 2 hrs/day revision only (no new topics, no mocks)
@@ -78,7 +78,7 @@
 
 ### Step 1: Math Foundation (Week 1-2)
 
-**Why first:** Math is foundational for both CS (12-16 marks) and DA (P&S + LA + Calc = 40% of DA marks). Without this, probability, ML, and algorithms won't make sense.
+**Why first:** Math is foundational for both CS (12-15 marks) and DA (P&S + LA + Calc = 40% of DA marks). Without this, probability, ML, and algorithms won't make sense.
 
 **Study in this order:**
 
@@ -120,7 +120,7 @@
 
 ### Step 2: DSA Basics (Week 3-4)
 
-**Why second:** DSA is the highest-weight CS topic (22-28 marks combined with Algorithms). It also powers your earning (CP contests, freelancing).
+**Why second:** DSA is the highest-weight CS topic (15-22 marks combined with Algorithms). It also powers your earning (CP contests, freelancing).
 
 **Study in this order:**
 
@@ -397,7 +397,7 @@ Regardless of which phase you're in:
 
 **Pass 1 -- Coverage (Week 16):**
 - Solve all DA papers 2024-2026
-- Focus on: P&S (55 marks), PDSA (50 marks), ML (44 marks)
+- Focus on: P&S (55 marks), PDSA (48 marks), ML (40 marks)
 - **Target:** Solve 150+ DA problems.
 
 **Pass 2 -- Recurrence (Week 17):**
@@ -488,42 +488,46 @@ Regardless of which phase you're in:
 
 #### CS Weightage
 
-- **PDS + Algorithms:** 22-28 marks | 24% time | PRIORITY 1
-- **Engineering Mathematics:** 12-16 marks | 13% time | PRIORITY 1
-- **COA:** 8-12 marks | 11% time | PRIORITY 1
-- **OS:** 7-10 marks | 9% time | PRIORITY 1
-- **ToC:** 6-10 marks | 9% time | PRIORITY 1
-- **DBMS:** 6-9 marks | 8% time | PRIORITY 1
-- **CN:** 7-10 marks | 9% time | PRIORITY 1
-- **Compiler:** 4-7 marks | 5% time | PRIORITY 2
-- **Digital Logic:** 4-7 marks | 3% time | PRIORITY 2
+- **PDS + Algorithms:** 15-22 marks (avg 18.2) | 24% time | PRIORITY 1
+- **Engineering Mathematics:** 12-15 marks (avg 13.7) | 13% time | PRIORITY 1
+- **COA:** 8-10 marks (avg 9.2) | 11% time | PRIORITY 1
+- **OS:** 7-9 marks (avg 8.0) | 9% time | PRIORITY 1
+- **CN:** 6-9 marks (avg 7.8) | 9% time | PRIORITY 1
+- **DBMS:** 6-9 marks (avg 7.5) | 8% time | PRIORITY 1
+- **ToC:** 6-8 marks (avg 6.8) | 9% time | PRIORITY 1
+- **Digital Logic:** 6-9 marks (avg 7.3) | 3% time | PRIORITY 2
+- **Compiler:** 5-8 marks (avg 6.5) | 5% time | PRIORITY 2
 - **General Aptitude:** 15 marks (fixed) | 9% time | FIXED
 
 **Rule:** Prepare all P1 domains to minimum competency before over-optimizing any P2 domain.
 
+*Ranges = min–max across recent papers (2024–2026); avg = 6-paper mean. Source: [ProSyllabus GATE CS topic-wise weightage](https://www.prosyllabus.com/hub/gate-cs-topic-wise-weightage).*
+
 #### DA Weightage
 
 - **Probability & Statistics:** 21.6% (55 marks) | 22% time | PRIORITY 1
-- **PDSA:** 19.6% (50 marks) | 18% time | PRIORITY 1
-- **Machine Learning:** 17.3% (44 marks) | 16% time | PRIORITY 1
+- **PDSA:** 18.8% (48 marks) | 18% time | PRIORITY 1
+- **Machine Learning:** 15.7% (40 marks) | 16% time | PRIORITY 1
 - **DBMS:** 14.1% (36 marks) | 14% time | PRIORITY 1
 - **Linear Algebra:** 11.8% (30 marks) | 12% time | PRIORITY 1
-- **AI:** 8.6% (22 marks) | 8% time | PRIORITY 2
-- **Calculus & Optimization:** 7.1% (18 marks) | 10% time | PRIORITY 1
+- **AI:** 9.4% (24 marks) | 8% time | PRIORITY 2
+- **Calculus & Optimization:** 8.6% (22 marks) | 10% time | PRIORITY 1
 
-**Key:** P&S + PDSA + ML = 58.5% of DA paper. These three alone can fetch 50+ marks out of 85.
+**Key:** P&S + PDSA + ML = 56.1% of DA paper. These three alone cover about 48 of the 85 subject marks each paper.
+
+*Marks = 3-year totals across the 2024–2026 papers (out of 255 subject marks). Source: [ProSyllabus GATE DA topic-wise weightage](https://www.prosyllabus.com/hub/gate-da-topic-wise-weightage-2024-2026).*
 
 #### CS + DA Overlap (Study Once, Score Twice)
 
 **Shared topics (study ONCE):**
-- PDSA / DSA: CSE 22-28 marks | DA 50 marks
-- DBMS: CSE 8-10 marks | DA 36 marks
-- Engineering Math: CSE 12-15 marks | DA P&S+LA+Calc = 103 marks
+- PDSA / DSA: CSE 15-22 marks | DA 48 marks
+- DBMS: CSE 6-9 marks | DA 36 marks
+- Engineering Math: CSE 12-15 marks | DA P&S+LA+Calc = 107 marks
 - Probability: Part of Math (CSE) | DA 55 marks (DA goes MUCH deeper)
 
 **DA-only topics (dedicate DA time):**
-- Machine Learning: 44 marks | No CSE overlap
-- AI (search, logic, Bayes nets): 22 marks | No CSE overlap
+- Machine Learning: 40 marks | No CSE overlap
+- AI (search, logic, Bayes nets): 24 marks | No CSE overlap
 - Advanced Probability: Part of 55 DA marks | Basic probability only in CSE
 - Data Warehousing: Part of 36 DA marks | No CSE overlap
 - Linear Algebra (deep): 30 marks | Basic LA only in CSE
@@ -531,7 +535,7 @@ Regardless of which phase you're in:
 **CS-only topics (no DA relevance):**
 - OS, CN, COA, Digital Logic, Compiler, TOC
 
-**Key Insight:** ~40% of DA marks come from topics with ZERO CSE overlap. These require separate study blocks. The remaining 60% shares significant overlap with CSE.
+**Key Insight:** ML + AI alone = 25% of DA marks with ZERO CSE overlap; counting deep Linear Algebra and Data Warehousing, over a third of the paper needs separate study blocks. The rest shares significant overlap with CSE.
 
 ---
 
