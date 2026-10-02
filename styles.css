@@ -20,8 +20,8 @@
 
     /* Text: cool-tinted for reduced eye strain */
     --text-primary: oklch(0.93 0.01 240);
-    --text-secondary: oklch(0.62 0.025 240);
-    --text-dim: oklch(0.42 0.02 240);
+    --text-secondary: oklch(0.70 0.025 240);
+    --text-dim: oklch(0.62 0.02 240);
 
     --border-color: rgba(100, 180, 180, 0.08);
     --sidebar-width: 240px;
@@ -44,6 +44,25 @@
     --callout-yellow-border: oklch(0.85 0.15 95);
 
     --progress-ring-circumference: 157.08;
+
+    /* Motion: one easing curve (used by all new / retimed transitions) */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* Elevation: three levels + one accent-tinted lift */
+    --shadow-sm: 0 2px 6px rgba(3, 8, 18, 0.30);
+    --shadow-md: 0 8px 22px rgba(3, 8, 18, 0.38);
+    --shadow-lg: 0 16px 40px rgba(3, 8, 18, 0.45);
+    --shadow-accent: 0 6px 20px rgba(100, 170, 180, 0.22);
+
+    /* Accent-tinted hover border + checked-row fill (0.55 => 3.5:1 on card surfaces) */
+    --border-accent: rgba(230, 172, 61, 0.55);
+    --accent-tint: rgba(230, 172, 61, 0.09);
+
+    /* Accent glow: one token per pulse/progress glow so no raw rgba shadows remain */
+    --glow-progress: 0 0 8px rgba(100, 170, 180, 0.30);
+    --glow-pulse-start: 0 0 16px rgba(100, 170, 180, 0.08);
+    --glow-pulse-end: 0 0 24px rgba(100, 170, 180, 0.15);
+    --countdown-inset: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 /* Light theme — Cloud Dancer inspired warm neutrals (Pantone 2026) */
@@ -51,14 +70,44 @@
     --bg-deep: oklch(0.97 0.008 80);
     --bg-surface: oklch(1.00 0.00 0);
     --bg-elevated: oklch(0.96 0.008 80);
-    --accent: oklch(0.55 0.12 80);
+    --accent: oklch(0.50 0.12 80);
     --accent-glow: oklch(0.62 0.13 82);
     --accent-dim: oklch(0.48 0.10 78);
     --text-primary: oklch(0.18 0.015 240);
     --text-secondary: oklch(0.42 0.02 240);
-    --text-dim: oklch(0.60 0.015 240);
+    --text-dim: oklch(0.52 0.015 240);
     --border-color: rgba(100, 140, 140, 0.12);
     --callout-bg: rgba(100, 140, 140, 0.04);
+
+    /* Phase colors darkened for AA: phase text passes 4.5:1 on every light surface */
+    --phase-1: oklch(0.50 0.14 240);
+    --phase-2: oklch(0.50 0.14 155);
+    --phase-3: oklch(0.50 0.12 185);
+    --phase-4: oklch(0.50 0.14 80);
+    --phase-5: oklch(0.50 0.16 15);
+    --phase-6: oklch(0.50 0.15 95);
+
+    /* Callout borders: 3:1 non-text contrast on light surfaces */
+    --callout-green-border: oklch(0.55 0.14 155);
+    --callout-blue-border: oklch(0.55 0.14 240);
+    --callout-purple-border: oklch(0.55 0.14 300);
+    --callout-orange-border: oklch(0.55 0.14 55);
+    --callout-red-border: oklch(0.55 0.16 20);
+    --callout-yellow-border: oklch(0.55 0.15 95);
+
+    /* Light elevation: softer, warmer shadows */
+    --shadow-sm: 0 2px 6px rgba(46, 38, 20, 0.10);
+    --shadow-md: 0 8px 22px rgba(46, 38, 20, 0.14);
+    --shadow-lg: 0 16px 40px rgba(46, 38, 20, 0.16);
+    --shadow-accent: 0 6px 20px rgba(184, 128, 10, 0.20);
+    --border-accent: rgba(134, 89, 0, 0.70);
+    --accent-tint: rgba(134, 89, 0, 0.10);
+
+    /* Light accent glow: warm gold, same three levels as dark */
+    --glow-progress: 0 0 8px rgba(184, 128, 10, 0.30);
+    --glow-pulse-start: 0 0 16px rgba(184, 128, 10, 0.10);
+    --glow-pulse-end: 0 0 24px rgba(184, 128, 10, 0.18);
+    --countdown-inset: inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* === RESET & BASE === */
@@ -72,6 +121,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     overflow-x: clip;
+    scrollbar-color: var(--accent-dim) var(--bg-deep);
 }
 
 body {
@@ -91,6 +141,11 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     body { cursor: auto; }
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg-deep);
 }
 
 /* Grain texture overlay */
@@ -176,7 +231,7 @@ body > * {
 }
 
 .hero-section {
-    animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.6s ease;
 }
 
 .hero-section h1 {
@@ -209,7 +264,7 @@ body > * {
     padding: 8px 16px;
     z-index: 10000;
     font-weight: 600;
-    border-radius: 0 0 4px 0;
+    border-radius: 0 0 8px 0;
     transition: top 0.2s ease;
 }
 .skip-link:focus {
@@ -219,6 +274,15 @@ body > * {
 /* === HEADING FONT === */
 h1, h2, h3, h4 {
     font-family: 'Space Grotesk', sans-serif;
+}
+
+/* === NUMERIC RHYTHM === */
+.countdown-number,
+.meta-value,
+.progress-text,
+.progress-ring-text,
+table {
+    font-variant-numeric: tabular-nums;
 }
 
 /* === SIDEBAR === */
@@ -251,7 +315,7 @@ h1, h2, h3, h4 {
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--accent);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
 .theme-toggle {
@@ -265,14 +329,18 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
-    transition: background-color 0.2s ease, color 0.2s ease;
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06), 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s var(--ease-out);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06), var(--shadow-sm);
 }
 
 .theme-toggle:hover {
     background: var(--accent);
     color: var(--bg-deep);
-    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 8px rgba(100, 170, 180, 0.3);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), var(--shadow-md);
+}
+
+.theme-toggle:active {
+    transform: translateY(1px);
 }
 
 .icon-sun, .icon-moon {
@@ -316,8 +384,8 @@ h1, h2, h3, h4 {
     width: 0%;
     background: var(--accent);
     border-radius: 3px;
-    transition: width 0.5s ease;
-    box-shadow: 0 0 8px rgba(100, 170, 180, 0.3);
+    transition: width 0.6s var(--ease-out);
+    box-shadow: var(--glow-progress);
 }
 
 .progress-text {
@@ -390,7 +458,7 @@ h1, h2, h3, h4 {
 .nav-link:hover {
     color: var(--text-primary);
     background: var(--bg-elevated);
-    border-left-color: var(--text-dim);
+    border-left-color: var(--accent);
 }
 
 .nav-link.active {
@@ -411,6 +479,21 @@ h1, h2, h3, h4 {
     border-left-color: var(--phase-5);
 }
 
+/* Hover bar follows the phase accent (matches .active treatment) */
+.nav-link.phase-1:hover { border-left-color: var(--phase-1); }
+.nav-link.phase-2:hover { border-left-color: var(--phase-2); }
+.nav-link.phase-3:hover { border-left-color: var(--phase-3); }
+.nav-link.phase-4:hover { border-left-color: var(--phase-4); }
+.nav-link.phase-5:hover { border-left-color: var(--phase-5); }
+.nav-link.phase-6:hover { border-left-color: var(--phase-6); }
+.nav-link.emergency-nav:hover { border-left-color: var(--phase-5); }
+
+/* Pressed: same row wash as hover, accent label marks the activation */
+.nav-link:active {
+    background: var(--bg-elevated);
+    color: var(--accent);
+}
+
 /* === HAMBURGER === */
 .hamburger {
     display: none;
@@ -429,6 +512,18 @@ h1, h2, h3, h4 {
     justify-content: center;
     gap: 4px;
     padding: 10px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-out);
+}
+
+@media (hover: hover) {
+    .hamburger:hover {
+        background: var(--bg-elevated);
+        border-color: var(--border-accent);
+    }
+}
+
+.hamburger:active {
+    transform: translateY(1px);
 }
 
 .hamburger span {
@@ -490,7 +585,7 @@ h1, h2, h3, h4 {
     font-weight: 700;
     margin-bottom: 12px;
     color: var(--text-primary);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .subtitle {
@@ -519,18 +614,20 @@ h1, h2, h3, h4 {
 .meta-item {
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px 18px;
     display: flex;
     flex-direction: column;
     gap: 2px;
     min-width: 140px;
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s var(--ease-out);
 }
 
-.meta-item:hover {
-    box-shadow: 0 4px 20px rgba(100, 170, 180, 0.08);
-    transform: translateY(-1px);
+@media (hover: hover) {
+    .meta-item:hover {
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-1px);
+    }
 }
 
 .meta-label {
@@ -558,26 +655,27 @@ h1, h2, h3, h4 {
     border: 1px solid rgba(100, 170, 180, 0.2);
     border-radius: 16px;
     padding: 24px 48px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-lg), var(--countdown-inset);
 }
 
+/* Pulse keeps the elevation layer, so the card never "pops" flat mid-animation */
 @keyframes countdownPulse {
-    from { box-shadow: 0 0 16px rgba(100, 170, 180, 0.08); }
-    to { box-shadow: 0 0 24px rgba(100, 170, 180, 0.15); }
+    from { box-shadow: var(--shadow-lg), var(--countdown-inset), var(--glow-pulse-start); }
+    to { box-shadow: var(--shadow-lg), var(--countdown-inset), var(--glow-pulse-end); }
 }
 
 [data-theme="light"] .countdown-box {
     background: rgba(255, 255, 255, 0.6);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    box-shadow: var(--shadow-lg), var(--countdown-inset);
 }
 
 .countdown-label {
     font-size: 0.8rem;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     margin-bottom: 4px;
     font-family: 'JetBrains Mono', monospace;
 }
@@ -602,7 +700,7 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--border-color);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
 }
 
@@ -623,7 +721,7 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     padding: 28px;
     margin-bottom: 20px;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease-out);
     position: relative;
     overflow: hidden;
 }
@@ -640,9 +738,12 @@ h1, h2, h3, h4 {
     pointer-events: none;
 }
 
-.card:hover {
-    box-shadow: 0 4px 20px rgba(100, 170, 180, 0.08);
-    border-color: rgba(100, 170, 180, 0.15);
+@media (hover: hover) {
+    .card:hover {
+        box-shadow: var(--shadow-md), var(--shadow-accent);
+        border-color: var(--border-accent);
+        transform: translateY(-2px);
+    }
 }
 
 [data-theme="light"] .card {
@@ -652,16 +753,18 @@ h1, h2, h3, h4 {
     border-color: rgba(184, 128, 10, 0.1);
 }
 
-[data-theme="light"] .card:hover {
-    box-shadow: 0 4px 20px rgba(184, 128, 10, 0.08);
-    border-color: rgba(184, 128, 10, 0.18);
+@media (hover: hover) {
+    [data-theme="light"] .card:hover {
+        box-shadow: var(--shadow-md), var(--shadow-accent);
+        border-color: var(--border-accent);
+        transform: translateY(-2px);
+    }
 }
 
 /* === FOCUS VISIBLE === */
 *:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
-    border-radius: 4px;
 }
 
 .phase-header:focus-visible {
@@ -719,7 +822,7 @@ h1, h2, h3, h4 {
 /* === CALLOUTS === */
 .callout {
     padding: 16px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 16px 0;
     border-left: 4px solid;
     font-size: 0.95rem;
@@ -774,9 +877,9 @@ h1, h2, h3, h4 {
     border-radius: 12px;
     margin-bottom: 16px;
     overflow: hidden;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s var(--ease-out);
     position: relative;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 .phase-block::before {
     content: '';
@@ -791,19 +894,27 @@ h1, h2, h3, h4 {
     pointer-events: none;
 }
 
-.phase-block:hover {
-    border-color: rgba(100, 170, 180, 0.15);
+@media (hover: hover) {
+    .phase-block:hover {
+        border-color: var(--border-accent);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md), var(--shadow-accent);
+    }
 }
 
 [data-theme="light"] .phase-block {
     background: rgba(255, 255, 255, 0.55);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-[data-theme="light"] .phase-block:hover {
-    border-color: rgba(184, 128, 10, 0.15);
+@media (hover: hover) {
+    [data-theme="light"] .phase-block:hover {
+        border-color: var(--border-accent);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md), var(--shadow-accent);
+    }
 }
 
 [data-theme="light"] .sidebar {
@@ -840,6 +951,10 @@ h1, h2, h3, h4 {
     background: var(--bg-elevated);
 }
 
+.phase-header:active {
+    background: var(--accent-tint);
+}
+
 .phase-header h3 {
     font-size: 1.05rem;
     font-weight: 600;
@@ -855,7 +970,7 @@ h1, h2, h3, h4 {
     padding: 0 24px 24px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.3s var(--ease-out), padding 0.3s ease, opacity 0.3s ease;
     opacity: 0;
 }
 
@@ -871,13 +986,24 @@ h1, h2, h3, h4 {
 /* === SUB-HEADINGS === */
 .sub-heading {
     font-size: 1.05rem;
-    margin: 20px 0 12px;
+    margin: 24px 0 12px;
     color: var(--text-primary);
+}
+
+.card > .sub-heading:first-child {
+    margin-top: 0;
+}
+
+/* First heading of any block sits flush with its container (global reset gives
+   elements 0 top margin; only .sub-heading/h4 re-add it) */
+h3:first-child,
+h4:first-child {
+    margin-top: 0;
 }
 
 h4 {
     font-size: 0.95rem;
-    margin: 16px 0 8px;
+    margin: 20px 0 10px;
     color: var(--text-primary);
     font-weight: 600;
 }
@@ -1006,12 +1132,21 @@ h4 {
     border: 1px solid rgba(100, 170, 180, 0.06);
     border-radius: 8px;
     cursor: pointer;
-    transition: border-left-color 0.2s ease;
+    transition: border-left-color 0.2s ease, background-color 0.2s ease;
     font-size: 0.95rem;
     border-left: 3px solid transparent;
 }
 
 .check-item:hover {
+    border-left-color: var(--accent);
+}
+
+.check-item:active {
+    background-color: var(--accent-tint);
+}
+
+.check-item:has(input:checked) {
+    background-color: var(--accent-tint);
     border-left-color: var(--accent);
 }
 
@@ -1023,9 +1158,15 @@ h4 {
     flex-shrink: 0;
 }
 
+.check-item input[type="checkbox"]:hover {
+    accent-color: var(--accent-glow);
+}
+
+/* Completed rows sit on the accent tint, so they need the stronger muted token
+   (text-dim drops to 4.2:1 on that tint in dark theme) */
 .check-item input[type="checkbox"]:checked + span {
     text-decoration: line-through;
-    color: var(--text-dim);
+    color: var(--text-secondary);
 }
 
 .check-item input[type="checkbox"]:checked {
@@ -1078,10 +1219,10 @@ blockquote {
     padding: 16px 20px;
     margin: 16px 0;
     background: var(--bg-elevated);
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 12px 12px 0;
     font-style: italic;
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .key-insight-card {
@@ -1114,7 +1255,7 @@ blockquote {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(100, 170, 180, 0.3);
+    box-shadow: var(--shadow-accent);
 }
 
 .back-to-top.visible {
@@ -1125,8 +1266,12 @@ blockquote {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(100, 170, 180, 0.4);
+    box-shadow: var(--shadow-md), var(--shadow-accent);
     animation: none;
+}
+
+.back-to-top:active {
+    transform: translateY(1px);
 }
 
 /* === RESPONSIVE === */
@@ -1278,7 +1423,7 @@ blockquote {
 
     .hero-section {
         padding: 30px 14px 24px;
-        border-radius: 10px;
+        border-radius: 12px;
         margin-bottom: 28px;
     }
 
@@ -1327,7 +1472,7 @@ blockquote {
 
     .card {
         padding: 16px;
-        border-radius: 10px;
+        border-radius: 12px;
     }
 
     .callout {
@@ -1509,8 +1654,49 @@ blockquote {
     }
 }
 
-/* Reduced motion - simpler follow */
+/* Reduced motion - neutralize entrances, hover lift, smooth scroll */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .section.reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .hero-section,
+    .hero-section h1,
+    .hero-section .subtitle,
+    .hero-meta,
+    .countdown-box {
+        opacity: 1;
+        animation: none;
+    }
+
+    .card:hover,
+    .phase-block:hover,
+    .meta-item:hover,
+    .back-to-top:hover,
+    .theme-toggle:active,
+    .hamburger:active,
+    .back-to-top:active {
+        transform: none;
+    }
+
+    p a {
+        background-size: 100% 1px;
+    }
+
     .cursor-dot,
     .cursor-ring {
         transition: none !important;
@@ -1526,13 +1712,15 @@ blockquote {
     background: var(--bg-deep);
 }
 
+/* Thumb mirrors scrollbar-color (accent-dim / accent-glow) so WebKit and
+   standard scrollbars match and clear the 3:1 non-text threshold */
 ::-webkit-scrollbar-thumb {
-    background: rgba(100, 170, 180, 0.2);
+    background: var(--accent-dim);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 170, 180, 0.35);
+    background: var(--accent-glow);
 }
 
 /* === RESOURCE LINKS === */
@@ -1541,11 +1729,39 @@ a {
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 a:hover { color: var(--text-primary); }
-.skip-link:hover, .skip-link:focus { color: var(--bg-deep); }
+a:active { color: var(--text-primary); }
+.skip-link:hover, .skip-link:focus, .skip-link:active { color: var(--bg-deep); }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* In-text prose links: underline draws in on hover / focus */
+p a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    padding-bottom: 1px;
+    transition: color 0.2s ease, background-size 0.3s var(--ease-out);
+}
+
+p a:hover,
+p a:focus-visible {
+    background-size: 100% 1px;
+}
+
+/* Resource list links: keep a real underline, ease its colour to primary */
+li a {
+    text-decoration-color: var(--accent-dim);
+}
+
+li a:hover,
+li a:focus-visible {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
 
 #resources .card ul li {
     margin-bottom: 6px;
